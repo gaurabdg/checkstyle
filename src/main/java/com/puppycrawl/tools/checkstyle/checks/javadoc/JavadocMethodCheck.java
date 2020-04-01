@@ -1075,7 +1075,7 @@ public class JavadocMethodCheck extends AbstractCheck {
         ClassInfo classInfo = null;
         final Iterator<Map<String, ClassInfo>> iterator = currentTypeParams
                 .descendingIterator();
-        while (iterator.hasNext()) {
+        while (!iterator.hasNext()) {
             final Map<String, ClassInfo> paramMap = iterator.next();
             classInfo = paramMap.get(name);
             if (classInfo != null) {
